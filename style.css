@@ -2,77 +2,17 @@
 
 * {
     font-family: 'Work Sans', sans-serif;
+    color: white;
 }
 
 body {
     height: 100%;
     padding: 0;
     margin: 0;
-    cursor: none;
+    background: rgb(60, 60, 60);
 }
 
-.nav {
-    position: fixed;
-    display: flex;
-    background: transparent;
-    margin-top: 15%;
-    width: 17.5%;
-}
-
-ul {
-    background: transparent;
-    width: 100%;
-    list-style-type: none;
-    color: rgb(255, 255, 255);
-    font-size: 25px;
-    margin-left: 25%;
-}
-
-li {
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-li:hover {
-    font-size: 30px;
-    transition: all 0.5s ease;
-}
-
-.content {
-    padding-top: 5%;
-}
-
-.profile-pic {
-    background-image: url("img/profile.jpg");
-    background-size: 250px;
-    border-radius: 100%;
-    width: 250px;
-    height: 250px;
-    margin-left: 50%;
-}
-
-.name {
-    margin-left: 50%;
-    color: white;
-}
-
-canvas {
-    display: block;
-    vertical-align: bottom;
-}
-
-/* ---- particles.js container ---- */
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(21, 21, 34);
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-}
-
-.cursor {
+/* .cursor {
     z-index: 999;
     position: fixed;
     background: white;
@@ -82,4 +22,153 @@ canvas {
     pointer-events: none;
     transform: translate(-50%, -50%);
     display: none;
+} */
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-areas: 
+        "sidebar about"
+        "sidebar edu"
+        "sidebar exp"
+        "sidebar skill"
+    ;
+}
+
+.sidebar {
+    background: transparent;
+    grid-area: sidebar;
+}
+
+.about {
+    background: transparent;
+    /* border: 3px solid white; */
+    grid-area: about;
+}       
+
+.edu {
+    background: transparent;
+    /* border: 3px solid white; */
+    grid-area: edu;
+}
+
+.exp {
+    background: transparent;
+    /* border: 3px solid white; */
+    grid-area: exp;
+}
+
+.skill {
+    background: transparent;
+    /* border: 3px solid white; */
+    grid-area: skill
+}
+.nav {
+    margin-top: 100%;
+    list-style-type: none;
+    font-size: 30px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.nav li {
+    padding: 5%;
+}
+
+.nav li a:hover {
+    font-size: 110%;
+    transition: all 0.5s ease;
+    padding: 7.5%;
+}
+
+.nav li a {
+    padding: 5%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.about, .edu, .exp, .skill {
+    padding: 2.5%;
+}
+
+.about {
+    background: rgb(55, 55, 55);
+    font-size: 20px;
+    text-align: center;
+}
+
+.edu {
+    background: rgb(50, 50, 50);
+    text-align: justify;
+}
+
+.exp {
+    background: rgb(45, 45, 45);
+    text-align: justify;
+}
+
+.skill {
+    background: rgb(40, 40, 40);
+    text-align: justify;
+}
+
+.about img {
+    border-radius: 50%;
+    width: 250px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about h1 {
+    font-weight: 600;
+}
+
+.about .header-name {
+    color: aquamarine;
+}
+
+.about .name {
+    color: rgb(255, 253, 127);
+    font-weight: 500;
+}
+
+.about p, h2 {
+    text-align: justify;
+}
+
+.about .header-language {
+    font-weight: 400;
+}
+
+.edu h2, .exp h2 {
+    font-size: 30px;
+    margin-top: 2.5px;
+    margin-bottom: -10px;
+}
+
+.edu h3, .exp h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: -5px;
+}
+
+.edu h3 span, .exp h3 span{
+    line-height: 40px;
+}
+
+.edu .important {
+    color: rgb(50, 50, 50);
+    background: rgb(225, 225, 225);
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.edu .gpa {
+    color: white;
+    padding: 0 5px;
+    border-radius: 5px;
+    border: 3px solid white;
+    line-height: 60px;
+    margin-left: 5px;
 }
